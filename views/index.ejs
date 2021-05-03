@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('components/head'); -%>
+
+  <body>
+
+    <form id="formulario">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Número</label>
+        <input id="number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="xxxx xxxx xxxx xxxx">
+        <small id="emailHelp" class="form-text text-muted">Debes ingresar un minimo de 11 digitos.</small>
+      </div>
+      <br>
+      <button type="button" class="btn btn-primary">Generar</button>
+    </form>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Valid thru</th>
+          <th scope="col">cvv</th>
+        </tr>
+      </thead>
+      <tbody id="dataTable">
+
+      </tbody>
+    </table>
+
+    <%- include('components/scripts'); -%>
+  </body>
+
+</html>
