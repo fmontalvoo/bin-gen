@@ -5,29 +5,51 @@
 
   <body>
 
-    <form id="formulario">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Número</label>
-        <input id="number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-          placeholder="xxxx xxxx xxxx xxxx">
-        <small id="emailHelp" class="form-text text-muted">Debes ingresar un minimo de 11 digitos.</small>
-      </div>
-      <br>
-      <button type="button" class="btn btn-primary">Generar</button>
-    </form>
+    <div class="container">
+      <form id="formulario">
+        <div class="form-group">
+          <label for="number">Número</label>
+          <input id="number" type="text" class="form-control" placeholder="xxxx xxxx xxxx xxxx" autocomplete="off">
+          <small class="form-text text-muted">Debes ingresar un minimo de 11 digitos.</small>
+        </div>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Valid thru</th>
-          <th scope="col">cvv</th>
-        </tr>
-      </thead>
-      <tbody id="dataTable">
+        <div class="row">
+          <div class="col">
+            <label for="valid">Fecha</label>
+            <input id="valid" type="text" class="form-control" placeholder="mm/yyyy" autocomplete="off">
+            <div class="form-check">
+              <input id="randomV" class="form-check-input" type="checkbox">
+              <label class="form-check-label" for="defaultCheck1">
+                Fecha aleatoria
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <label for="cvv">CVV</label>
+            <input id="cvv" type="number" class="form-control" placeholder="xxx" autocomplete="off">
+            <div class="form-check">
+              <input id="randomC" class="form-check-input" type="checkbox">
+              <label class="form-check-label" for="defaultCheck1">
+                CVV aleatorio
+              </label>
+            </div>
+          </div>
+        </div>
 
-      </tbody>
-    </table>
+        <div class="form-group">
+          <label for="range">Cantidad</label>
+          <input id="range" type="number" class="form-control" min="1" max="100" value="5">
+        </div>
+
+        <br>
+        <button type="button" class="btn btn-success">Generar</button>
+      </form>
+    </div>
+
+    <div class="form-group">
+      <label for="result">Resultado</label>
+      <textarea class="form-control" id="result" rows="7"></textarea>
+    </div>
 
     <%- include('components/scripts'); -%>
   </body>

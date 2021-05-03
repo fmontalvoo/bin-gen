@@ -8,8 +8,8 @@ router.get('/', function (req, res, next) {
 
 router.get('/generate', function (req, res, next) {
   const params = req.query;
-  const { number, valid, cvv } = params;
-  res.send([params, { number, valid, cvv }, { number, valid, cvv }]);
+  const { number, valid, randomV, cvv, randomC, range } = params;
+  res.send([{ number, valid, cvv }, { number, valid, cvv }]);
 });
 
 module.exports = router;
