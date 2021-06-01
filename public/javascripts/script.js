@@ -14,6 +14,7 @@ $("button").on("click", function () {
     range = range > 9999 ? 9999 : range < 1 ? 1 : range;
 
     let randomG = $('#randomG').is(':checked');
+    let digits = $('#digits').is(':checked');
 
     $.ajax({
         type: 'GET',
@@ -23,7 +24,8 @@ $("button").on("click", function () {
             valid,
             cvv,
             range,
-            randomG
+            randomG, 
+            digits
         },
         contentType: 'application/json; charset=utf-8',
         success: function (data) {
